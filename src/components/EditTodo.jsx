@@ -12,7 +12,7 @@ function EditTodo () {
   });
   useEffect (() => {
     axios
-      .get ('/api/' + id)
+      .get ('https://merntodolistapp.herokuapp.com/api/' + id)
       .then (response =>
         setEdit ({
           description: response.data.description,
@@ -65,7 +65,7 @@ function EditTodo () {
     };
     
     axios
-      .post ('/api/update/' + id, item)
+      .post ('https://merntodolistapp.herokuapp.com/api/update/' + id, item)
       .then (response => setSuccess (true));
   }
   

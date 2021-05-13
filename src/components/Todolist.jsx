@@ -6,7 +6,7 @@ function Todolist () {
 
   useEffect (() => {
     axios
-      .get ('/api')
+      .get ('https://merntodolistapp.herokuapp.com/api')
       .then (response => {
         setTodos (response.data);
       })

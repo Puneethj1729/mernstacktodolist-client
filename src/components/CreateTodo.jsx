@@ -38,7 +38,7 @@ function CreateTodo () {
       priority:create.priority,
       completed:create.completed
     }
-    axios.post('/api/add',todo).then(res => setSuccess(true));
+    axios.post('https://merntodolistapp.herokuapp.com/api/add',todo).then(res => setSuccess(true));
     
     setCreate ({
       description: '',
